@@ -1,0 +1,13 @@
+{
+  "stage": 6,
+  "manuscript": "paper/manuscript_stage5.md",
+  "stage5_audit": "outputs/stage5/stage5_release_audit.json",
+  "claim_ledger": "outputs/stage5/claim_evidence_ledger.csv",
+  "stage5_manifest": "outputs/stage5/reproducibility_manifest.json",
+  "claim_status": "exploratory_only",
+  "claim_status_source": "outputs/stage5/stage5_release_audit.json",
+  "stage5_publication_status": "ready_for_human_review",
+  "required_input_failures": [],
+  "warnings": [],
+  "implementation_status": "PASS"
+}

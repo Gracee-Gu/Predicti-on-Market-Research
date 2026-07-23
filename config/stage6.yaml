@@ -1,0 +1,67 @@
+stage: 6
+
+stage5:
+  manuscript_candidates:
+    - paper/manuscript_stage5.md
+  audit_candidates:
+    - outputs/stage5/stage5_release_audit.json
+    - outputs/stage5/stage5_input_audit.json
+  ledger_candidates:
+    - outputs/stage5/claim_evidence_ledger.csv
+  manifest_candidates:
+    - outputs/stage5/reproducibility_manifest.json
+
+outputs:
+  root: outputs/stage6
+  clean_manuscript: paper/final/manuscript_clean.md
+  blinded_manuscript: paper/final/manuscript_blinded.md
+  defense_brief: paper/final/defense_brief.md
+  supervisor_memo: paper/final/supervisor_handoff.md
+  data_statement: paper/final/data_and_code_availability.md
+
+claim_policy:
+  authoritative_status_sources:
+    - outputs/stage5/stage5_release_audit.json
+    - outputs/stage5/stage5_input_audit.json
+    - outputs/stage4/stage4_audit.json
+    - outputs/stage4/input_audit.json
+  allowed_statuses:
+    - confirmatory_ready
+    - exploratory_only
+    - blocked
+  forbidden_when_not_confirmatory:
+    - proves that
+    - demonstrates that
+    - causes
+    - caused
+    - causal effect
+    - representative of the public
+    - generalizes to all media
+
+submission:
+  anonymize_patterns:
+    - "Gracee Gu"
+    - "Yingzi Gu"
+    - "顾英子"
+    - "Cornell Tech"
+  replacement: "[ANONYMIZED]"
+  include_generated_outputs: true
+  include_raw_copyrighted_text: false
+  include_credentials: false
+  max_capsule_file_bytes: 5000000
+
+required_sections:
+  - Abstract
+  - Introduction
+  - Theory and Hypotheses
+  - Data and Methods
+  - Results
+  - Discussion
+  - Limitations
+  - Conclusion
+  - Reproducibility Statement
+
+final_statuses:
+  - ready_for_supervisor_review
+  - ready_for_submission_precheck
+  - not_ready
