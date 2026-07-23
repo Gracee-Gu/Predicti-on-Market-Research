@@ -1,0 +1,17 @@
+{
+  "stage": 7,
+  "decision": "defer_until_empirical_recovery",
+  "alignment_status": "empirical_recovery_required",
+  "timestamp_coverage": 1.0,
+  "event_metric_columns": [
+    "quoted_price",
+    "quoted_price_unit",
+    "price_at_publication",
+    "trade_count_window",
+    "volume_window",
+    "spread_at_publication"
+  ],
+  "event_metric_coverage": 0.4482758620689655,
+  "market_quality_coverage": 0.02586206896551724,
+  "rationale": "The optional event study is deferred because the two core empirical components are not yet complete."
+}

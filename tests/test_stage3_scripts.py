@@ -3,7 +3,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from collect_publication_time_matches import candlestick_price, source_quoted_price
+from collect_publication_time_matches import (
+    candlestick_price,
+    candlestick_relative_spread,
+    merge_source_price_fallback,
+    source_quoted_price,
+)
 from match_market_mentions import build_catalog, match_media_row, resolve_market_from_event_payload
 from pmresearch.collectors.media import MediaCollector
 from pmresearch.market_utils import (
@@ -213,5 +218,35 @@ def test_candlestick_price_supports_historical_price_shape():
     )
 
 
+def test_candlestick_relative_spread_uses_bid_ask_midpoint():
+    assert (
+        candlestick_relative_spread(
+            {
+                "yes_bid": {"close_dollars": "0.40"},
+                "yes_ask": {"close_dollars": "0.44"},
+            }
+        )
+        == "0.095238"
+    )
+
+
 def test_source_quoted_price_normalizes_percent_to_probability():
     assert source_quoted_price({"quoted_price": "65", "quoted_price_unit": "%"}) == "0.6500"
+
+
+def test_merge_source_price_fallback_preserves_quality_fields():
+    payload = merge_source_price_fallback(
+        {
+            "snapshot_status": "historical_trade_matched",
+            "trade_count": 4,
+            "trailing_volume": 1200,
+            "price": "",
+            "source_endpoint": "historical_trades",
+        },
+        {"publication_time": "2026-07-01T00:00:00Z"},
+        "0.6500",
+    )
+    assert payload["snapshot_status"] == "historical_trade_matched"
+    assert payload["trade_count"] == 4
+    assert payload["trailing_volume"] == 1200
+    assert payload["price"] == "0.6500"

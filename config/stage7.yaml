@@ -1,0 +1,90 @@
+stage: 7
+title: "Prediction Markets as Manufactured Public Signals: Media Framing, Market Quality, and Representational Overreach"
+
+original_empirical_components:
+  - computational_content_analysis
+  - cited_market_quality_analysis
+optional_component:
+  - event_window_analysis
+
+inputs:
+  corpus_candidates:
+    - data/processed/media_corpus.csv
+    - data/processed/articles.csv
+    - data/inventory/corpus_inventory.csv
+  article_market_candidates:
+    - data/analysis/article_market_dataset.csv
+    - data/stage3/article_market_dataset.csv
+    - data/processed/article_market_matches.csv
+  annotations_candidates:
+    - data/annotations/adjudicated_annotations.csv
+    - data/annotations/coding_sheet_completed.csv
+  stage4_audit_candidates:
+    - outputs/stage4/stage4_audit.json
+    - outputs/stage4/input_audit.json
+  stage5_audit_candidates:
+    - outputs/stage5/stage5_release_audit.json
+  stage6_audit_candidates:
+    - outputs/stage6/final_audit.json
+
+gates:
+  minimum_total_documents: 80
+  minimum_source_types: 3
+  required_source_types:
+    - platform_owned
+    - independent_media
+  preferred_source_types:
+    - partner_media
+    - regulatory_critical
+  minimum_documents_per_required_source_type: 15
+  minimum_human_audited_units: 50
+  minimum_reliability_fields_reported: 3
+  minimum_market_quality_coverage: 0.50
+  minimum_publication_timestamp_coverage: 0.80
+  minimum_match_traceability: 0.90
+  minimum_case_evidence_rows: 10
+
+market_quality:
+  required_any_metrics:
+    - volume
+    - trade_frequency
+    - bid_ask_spread
+    - volatility
+    - price_stability
+  preferred_metrics:
+    - order_book_depth
+    - time_to_resolution
+  prohibit_volume_only_as_liquidity: true
+  require_raw_metric_outputs: true
+  require_cross_platform_comparability_note: true
+
+claim_policy:
+  final_claim:
+    "Prediction markets become credible public information not merely because their prices are accurate, but because platforms and media institutions selectively translate market prices into authoritative public signals. This translation frequently omits the market-quality and representativeness conditions required to justify such claims."
+  permitted_when_finalization_ready:
+    - comparative source-type associations
+    - within-corpus framing estimates
+    - publication-aligned market-quality associations
+    - case-level representational-overreach evidence
+  never_automatic:
+    - causal media effects
+    - representative public opinion
+    - universal claims about all prediction markets
+  prohibited_when_recovery_required:
+    - confirms the main hypothesis
+    - demonstrates that media institutions
+    - proves that prediction markets
+    - generalizes to all media
+    - causal effect
+
+outputs:
+  root: outputs/stage7
+  alignment_audit: outputs/stage7/alignment_audit.json
+  gap_matrix: outputs/stage7/evidence_gap_matrix.csv
+  evidence_map: outputs/stage7/research_question_evidence_map.csv
+  recovery_plan: outputs/stage7/empirical_recovery_plan.md
+  final_audit: outputs/stage7/final_delivery_audit.json
+  manuscript: paper/final/manuscript_stage7.md
+  appendix: paper/final/appendix_stage7.md
+  reviewer_report: paper/final/supervisor_style_review.md
+  pdf: paper/final/manuscript_stage7.pdf

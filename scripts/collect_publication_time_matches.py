@@ -57,6 +57,22 @@ def candlestick_price(row: dict) -> str:
     return str(ask_close or "")
 
 
+def candlestick_relative_spread(row: dict) -> str:
+    yes_bid = row.get("yes_bid", {}) or {}
+    yes_ask = row.get("yes_ask", {}) or {}
+    bid_close = yes_bid.get("close_dollars", yes_bid.get("close"))
+    ask_close = yes_ask.get("close_dollars", yes_ask.get("close"))
+    try:
+        bid = float(bid_close)
+        ask = float(ask_close)
+    except (TypeError, ValueError):
+        return ""
+    midpoint = (bid + ask) / 2
+    if midpoint <= 0:
+        return ""
+    return f"{(ask - bid) / midpoint:.6f}"
+
+
 def source_quoted_price(mention: dict) -> str:
     raw_value = str(mention.get("quoted_price", "")).strip()
     unit = str(mention.get("quoted_price_unit", "")).strip().lower()
@@ -73,6 +89,25 @@ def source_quoted_price(mention: dict) -> str:
     return raw_value
 
 
+def merge_source_price_fallback(payload: dict, mention: dict, quoted_price: str) -> dict:
+    if not quoted_price:
+        return payload
+    merged = dict(payload)
+    if merged.get("price") in (None, ""):
+        merged["price"] = quoted_price
+    if merged.get("snapshot_status") == "unavailable":
+        merged["snapshot_status"] = "historical_price_matched"
+        merged["observed_at"] = mention.get("publication_time", "")
+        merged["alignment_seconds"] = 0
+        source_endpoint = merged.get("source_endpoint", "")
+        merged["source_endpoint"] = (
+            f"{source_endpoint}+source_quoted_price_fallback"
+            if source_endpoint
+            else "source_quoted_price_fallback"
+        )
+    return merged
+
+
 def collect_kalshi_match(
     collector: KalshiCollector,
     mention: dict,
@@ -82,59 +117,68 @@ def collect_kalshi_match(
 ) -> dict:
     market_id = mention["market_id"]
     quoted_price = source_quoted_price(mention)
-    if quoted_price:
-        return {
-            "snapshot_status": "historical_price_matched",
-            "observed_at": mention.get("publication_time", ""),
-            "alignment_seconds": 0,
-            "price": quoted_price,
-            "trailing_volume": "",
-            "trade_count": "",
-            "source_endpoint": "source_quoted_price",
-        }
     trade_historical = historical_cutoff_ts is not None and target_ts < historical_cutoff_ts
     trade_errors: list[str] = []
-    trades: list[dict] = []
-    source_endpoint = "historical_trades" if trade_historical else "live_trades"
-    try:
-        trades = list(
-            collector.trades(
-                ticker=market_id,
-                min_ts=target_ts - window_seconds,
-                max_ts=target_ts + window_seconds,
-                historical=trade_historical,
-            )
-        )
-    except Exception as exc:  # pragma: no cover - network behavior
-        trade_errors.append(str(exc))
-        trades = []
+    trade_attempts = [trade_historical]
+    if not trade_historical:
+        trade_attempts.append(True)
+    else:
+        trade_attempts.append(False)
 
-    nearest = nearest_kalshi_trade(trades, target_ts)
-    if nearest:
-        observed_at = parse_publication_datetime(nearest.get("created_time", ""))
-        observed_ts = to_unix_seconds(observed_at)
-        return {
-            "snapshot_status": "historical_trade_matched",
-            "observed_at": nearest.get("created_time", ""),
-            "alignment_seconds": abs((observed_ts or target_ts) - target_ts),
-            "price": nearest.get("yes_price_dollars", ""),
-            "trailing_volume": sum(float(row.get("count_fp", 0.0) or 0.0) for row in trades),
-            "trade_count": len(trades),
-            "source_endpoint": source_endpoint,
-        }
+    for historical_flag in trade_attempts:
+        source_endpoint = "historical_trades" if historical_flag else "live_trades"
+        try:
+            trades = list(
+                collector.trades(
+                    ticker=market_id,
+                    min_ts=target_ts - window_seconds,
+                    max_ts=target_ts + window_seconds,
+                    historical=historical_flag,
+                )
+            )
+        except Exception as exc:  # pragma: no cover - network behavior
+            trade_errors.append(str(exc))
+            trades = []
+
+        nearest = nearest_kalshi_trade(trades, target_ts)
+        if nearest:
+            observed_at = parse_publication_datetime(nearest.get("created_time", ""))
+            observed_ts = to_unix_seconds(observed_at)
+            return merge_source_price_fallback(
+                {
+                    "snapshot_status": "historical_trade_matched",
+                    "observed_at": nearest.get("created_time", ""),
+                    "alignment_seconds": abs((observed_ts or target_ts) - target_ts),
+                    "price": nearest.get("yes_price_dollars", ""),
+                    "trailing_volume": sum(float(row.get("count_fp", 0.0) or 0.0) for row in trades),
+                    "trade_count": len(trades),
+                    "source_endpoint": source_endpoint,
+                },
+                mention,
+                quoted_price,
+            )
 
     series_ticker = mention.get("series_ticker", "")
     event_ticker = mention.get("event_ticker", "")
     if not event_ticker or not series_ticker:
-        try:
-            market_payload = (
-                collector.historical_market(market_id)
-                if trade_historical
-                else collector.market(market_id)
-            )
-        except Exception as exc:  # pragma: no cover - network behavior
-            trade_errors.append(str(exc))
-            market_payload = {}
+        market_payload = {}
+        market_attempts = [trade_historical]
+        if not trade_historical:
+            market_attempts.append(True)
+        else:
+            market_attempts.append(False)
+        for historical_flag in market_attempts:
+            try:
+                market_payload = (
+                    collector.historical_market(market_id)
+                    if historical_flag
+                    else collector.market(market_id)
+                )
+            except Exception as exc:  # pragma: no cover - network behavior
+                trade_errors.append(str(exc))
+                market_payload = {}
+            if market_payload:
+                break
         event_ticker = event_ticker or market_payload.get("event_ticker", "")
         series_ticker = series_ticker or market_payload.get("series_ticker", "")
     if not series_ticker and event_ticker:
@@ -145,39 +189,50 @@ def collect_kalshi_match(
             trade_errors.append(str(exc))
             series_ticker = ""
     if series_ticker and event_ticker:
-        try:
-            candlesticks = collector.candlesticks(
-                series_ticker=series_ticker,
-                ticker=market_id,
-                start_ts=target_ts - window_seconds,
-                end_ts=target_ts + window_seconds,
-                period_interval=60,
-                historical=trade_historical,
-            )
-        except Exception as exc:  # pragma: no cover - network behavior
-            trade_errors.append(str(exc))
-            candlesticks = []
-        nearest_candle = nearest_kalshi_candlestick(candlesticks, target_ts)
-        if nearest_candle:
-            observed_ts = int(nearest_candle.get("end_period_ts", target_ts))
-            observed_at = datetime.fromtimestamp(observed_ts, tz=timezone.utc).isoformat().replace("+00:00", "Z")
-            return {
-                "snapshot_status": "historical_price_matched",
-                "observed_at": observed_at,
-                "alignment_seconds": abs(observed_ts - target_ts),
-                "price": candlestick_price(nearest_candle),
-                "trailing_volume": nearest_candle.get("volume_fp", nearest_candle.get("volume", "")),
-                "trade_count": "",
-                "source_endpoint": "historical_candlesticks" if trade_historical else "live_candlesticks",
-            }
+        candle_attempts = [trade_historical]
+        if not trade_historical:
+            candle_attempts.append(True)
+        else:
+            candle_attempts.append(False)
+        for historical_flag in candle_attempts:
+            try:
+                candlesticks = collector.candlesticks(
+                    series_ticker=series_ticker,
+                    ticker=market_id,
+                    start_ts=target_ts - window_seconds,
+                    end_ts=target_ts + window_seconds,
+                    period_interval=60,
+                    historical=historical_flag,
+                )
+            except Exception as exc:  # pragma: no cover - network behavior
+                trade_errors.append(str(exc))
+                candlesticks = []
+            nearest_candle = nearest_kalshi_candlestick(candlesticks, target_ts)
+            if nearest_candle:
+                observed_ts = int(nearest_candle.get("end_period_ts", target_ts))
+                observed_at = datetime.fromtimestamp(observed_ts, tz=timezone.utc).isoformat().replace("+00:00", "Z")
+                return merge_source_price_fallback(
+                    {
+                        "snapshot_status": "historical_price_matched",
+                        "observed_at": observed_at,
+                        "alignment_seconds": abs(observed_ts - target_ts),
+                        "price": candlestick_price(nearest_candle),
+                        "trailing_volume": nearest_candle.get("volume_fp", nearest_candle.get("volume", "")),
+                        "trade_count": "",
+                        "relative_spread": candlestick_relative_spread(nearest_candle),
+                        "source_endpoint": "historical_candlesticks" if historical_flag else "live_candlesticks",
+                    },
+                    mention,
+                    quoted_price,
+                )
 
     payload = {
         "snapshot_status": "unavailable",
-        "source_endpoint": source_endpoint if trades or not trade_errors else "kalshi_trades_error",
+        "source_endpoint": "kalshi_trades_error" if trade_errors else "live_trades",
     }
     if trade_errors:
         payload["error"] = trade_errors[0]
-    return payload
+    return merge_source_price_fallback(payload, mention, quoted_price)
 
 
 def collect_polymarket_match(

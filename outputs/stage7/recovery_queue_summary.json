@@ -1,0 +1,6 @@
+{
+  "stage": 7,
+  "research_status": "empirical_recovery_required",
+  "queue_items": 1,
+  "queue_path": "outputs/stage7/recovery_queue.csv"
+}
