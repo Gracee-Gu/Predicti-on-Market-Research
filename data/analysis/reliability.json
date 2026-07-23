@@ -1,0 +1,46 @@
+{
+  "n_rows": 139,
+  "n_double_coded": 23,
+  "fields": {
+    "market_probability_present": {
+      "cohen_kappa": 1.0,
+      "ordinal_alpha": 1.0,
+      "n": 23
+    },
+    "probability_as_public_opinion": {
+      "cohen_kappa": 0.8203124999999999,
+      "ordinal_alpha": 0.8691860465116279,
+      "n": 23
+    },
+    "representativeness_caveat": {
+      "cohen_kappa": 1.0,
+      "ordinal_alpha": 1.0,
+      "n": 23
+    },
+    "market_quality_caveat": {
+      "cohen_kappa": 0.7481751824817517,
+      "ordinal_alpha": 0.7768595041322315,
+      "n": 23
+    },
+    "certainty_language": {
+      "cohen_kappa": 1.0,
+      "ordinal_alpha": 1.0,
+      "n": 23
+    },
+    "democratic_language": {
+      "cohen_kappa": 1.0,
+      "ordinal_alpha": 1.0,
+      "n": 23
+    },
+    "horse_race_frame": {
+      "cohen_kappa": 1.0,
+      "ordinal_alpha": 1.0,
+      "n": 23
+    },
+    "overreach_severity": {
+      "cohen_kappa": 0.727810650887574,
+      "ordinal_alpha": 0.8664688427299703,
+      "n": 23
+    }
+  }
+}

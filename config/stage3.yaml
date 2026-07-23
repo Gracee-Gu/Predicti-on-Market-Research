@@ -1,0 +1,17 @@
+stage: 3
+random_seed: 20260723
+inputs:
+  mentions_glob: data/processed/market_mentions*_v3.jsonl
+  snapshots_glob: data/processed/market_snapshots*_v3.jsonl
+outputs:
+  sampling_frame: data/annotations/sampling_frame.csv
+  coding_sheet: data/annotations/coding_sheet.csv
+  adjudicated: data/annotations/adjudicated_annotations.csv
+  analytic_dataset: data/analysis/article_market_dataset.csv
+minimums:
+  pilot_pairs: 30
+  double_code_fraction: 0.20
+  krippendorff_alpha_target: 0.67
+analysis:
+  publication_window_hours: 24
+  missing_quality_policy: explicit_missing_indicator

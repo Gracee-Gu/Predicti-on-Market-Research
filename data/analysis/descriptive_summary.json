@@ -1,0 +1,10 @@
+{
+  "n": 116,
+  "source_type_counts": {
+    "platform_owned": 116
+  },
+  "mean_overreach_by_source_type": {
+    "platform_owned": 1.5258620689655173
+  },
+  "quality_missing_rate": 0.9913793103448276
+}
