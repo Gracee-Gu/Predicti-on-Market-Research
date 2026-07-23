@@ -57,9 +57,8 @@ python scripts/build_stage3_analytic_dataset.py \
 ```
 
 The paper does not report a regression of overreach severity on the other constructs, because
-severity is deterministically composed from them (§3.3); `scripts/build_stage4_analysis.py` and
-`scripts/run_stage4_models.py` still exist in the repository but their output is not part of the
-paper and is not required to reproduce it.
+severity is deterministically composed from them (§3.3); the scripts that once produced that
+regression have been removed from the repository since their output was never part of the paper.
 
 ## 4. Independent market-quality verification and figures
 

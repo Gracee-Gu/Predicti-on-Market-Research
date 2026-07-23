@@ -4,7 +4,9 @@ Independent research project by Yingzi Gu (Cornell University), advised by Profe
 
 **The paper is [`paper/final/manuscript.pdf`](paper/final/manuscript.pdf).** Source is
 [`paper/final/manuscript.html`](paper/final/manuscript.html) (plain HTML/CSS, no LaTeX
-dependency); figures are in `paper/final/figures/`.
+dependency); figures are in `paper/final/figures/`. A plain-language visual companion is at
+[`paper/final/explainer.html`](paper/final/explainer.html) (English) and
+[`paper/final/explainer_zh.html`](paper/final/explainer_zh.html) (Chinese).
 
 ## What this project studies
 
@@ -46,7 +48,7 @@ In short:
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt -r stage4_requirements.txt
+pip install -r requirements.txt -r requirements-figures.txt
 uv run pytest                      # unit tests
 python scripts/make_figures.py     # regenerate figures from the audited data
 ```
