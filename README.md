@@ -5,8 +5,7 @@ Independent research project by Yingzi Gu (Cornell University), advised by Profe
 **The paper is [`paper/final/manuscript.pdf`](paper/final/manuscript.pdf).** Source is
 [`paper/final/manuscript.html`](paper/final/manuscript.html) (plain HTML/CSS, no LaTeX
 dependency); figures are in `paper/final/figures/`. A plain-language visual companion is at
-[`paper/final/explainer.html`](paper/final/explainer.html) (English) and
-[`paper/final/explainer_zh.html`](paper/final/explainer_zh.html) (Chinese).
+[`paper/final/explainer.html`](paper/final/explainer.html).
 
 ## What this project studies
 
