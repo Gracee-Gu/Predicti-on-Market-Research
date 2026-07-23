@@ -1,0 +1,33 @@
+project:
+  start_date: "2025-01-01"
+  cutoff_date: null
+  timezone: "UTC"
+  user_agent: "PredictionMarketResearch/0.2 (academic research; contact configured locally)"
+
+paths:
+  raw: "data/raw"
+  interim: "data/interim"
+  inventory: "data/inventory"
+
+kalshi:
+  base_url: "https://external-api.kalshi.com/trade-api/v2"
+  market_statuses: ["open", "closed", "settled"]
+  page_limit: 1000
+  request_sleep_seconds: 0.25
+  candlestick_period_minutes: 60
+
+polymarket:
+  gamma_base_url: "https://gamma-api.polymarket.com"
+  clob_base_url: "https://clob.polymarket.com"
+  page_limit: 500
+  request_sleep_seconds: 0.25
+  active: null
+  closed: null
+
+media:
+  store_full_text: false
+  excerpt_character_limit: 500
+  request_sleep_seconds: 1.0
+  allowed_content_types:
+    - "text/html"
+  seed_file: "config/media_sources.csv"

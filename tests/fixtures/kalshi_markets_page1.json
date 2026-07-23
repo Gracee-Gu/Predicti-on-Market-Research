@@ -1,0 +1,10 @@
+{
+  "markets": [
+    {
+      "ticker": "KXTEST-26",
+      "title": "Will test happen?",
+      "status": "open"
+    }
+  ],
+  "cursor": "next"
+}

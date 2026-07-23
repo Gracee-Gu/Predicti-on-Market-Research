@@ -1,0 +1,10 @@
+[
+  {
+    "id": "1",
+    "question": "Will test happen?",
+    "closed": false,
+    "clobTokenIds": "[\"yes-token\", \"no-token\"]",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "outcomePrices": "[\"0.6\", \"0.4\"]"
+  }
+]

@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.env
+.DS_Store
+
+# Raw or copyrighted source material is local-only.
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+
+# Processed row-level text may contain copyrighted excerpts.
+data/processed/*
+!data/processed/.gitkeep
+
+# Safe inventories and schemas may be committed.
+!data/inventory/

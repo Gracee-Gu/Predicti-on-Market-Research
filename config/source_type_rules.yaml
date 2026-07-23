@@ -1,0 +1,18 @@
+source_types:
+  platform_owned:
+    definition: "Content published on a prediction-market platform's owned domain or official newsroom."
+    evidence_required: "Owned-domain verification."
+  partner_media:
+    definition: "Media outlet with a publicly documented content, data, distribution, or commercial partnership with the platform during the observation date."
+    evidence_required: "Dated primary announcement or contractual disclosure."
+  independent_media:
+    definition: "Media source with no verified formal relationship at the observation date."
+    evidence_required: "Search log showing no qualifying partnership evidence; absence is provisional."
+  regulatory_critical:
+    definition: "Regulator, court, public-interest organization, academic institution, or explicitly critical institutional analysis."
+    evidence_required: "Institutional identity and document genre."
+
+coding_rules:
+  - "Frequent citation alone never establishes partnership."
+  - "Partnership status is time-varying and must be valid on the publication date."
+  - "Unknown is preferable to unsupported independent_media."
