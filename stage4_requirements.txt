@@ -1,0 +1,4 @@
+# Optional dependencies for multivariable models and figures.
+pandas>=2.0
+statsmodels>=0.14
+matplotlib>=3.7

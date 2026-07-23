@@ -5,6 +5,8 @@ __pycache__/
 .ruff_cache/
 .env
 .DS_Store
+uv.lock
+prediction_market_stage4_overlay.zip
 
 # Raw or copyrighted source material is local-only.
 data/raw/*
