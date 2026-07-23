@@ -23,6 +23,11 @@ class FakeTextClient:
         return (FIXTURES / "media.html").read_text(encoding="utf-8"), "text/html"
 
 
+class FailingTextClient:
+    def get_text(self, url):
+        raise RuntimeError("boom")
+
+
 def test_kalshi_pagination():
     import json
     p1 = json.loads((FIXTURES / "kalshi_markets_page1.json").read_text())
@@ -89,3 +94,18 @@ def test_media_copyright_safe_default():
     assert "full_text" not in row
     assert len(row["excerpt"]) <= 30
     assert row["text_sha256"]
+
+
+def test_media_collect_one_safe_captures_fetch_errors():
+    collector = MediaCollector(FailingTextClient(), store_full_text=False, excerpt_character_limit=30)
+    row = collector.collect_one_safe(
+        {
+            "source_id": "x",
+            "url": "https://example.com/a",
+            "published_at": "2026-07-01",
+            "source_type": "independent_media",
+        }
+    )
+    assert row["fetch_ok"] is False
+    assert row["fetch_error"] == "boom"
+    assert row["published_at_resolved"] == "2026-07-01"

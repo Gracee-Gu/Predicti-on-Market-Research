@@ -1,0 +1,9 @@
+source_id,source_name,source_type,formal_partnership,platform,url,published_at,article_genre,market_category,notes,partnership_evidence_url
+ind_ap_001,Associated Press,independent_media,0,multiple,https://apnews.com/article/dcc34f4d927d074fe4e1bedeff04b64f,2026-06-03,news,politics,Discovered from AP search,
+ind_ap_002,Associated Press,independent_media,0,multiple,https://apnews.com/article/4f3fef5679ed18442bf065e832185474,2026-06-13,news,other,Discovered from AP search,
+ind_ap_003,Associated Press,independent_media,0,kalshi,https://apnews.com/article/c611cae905f7c4dbdbba5f371cf92701,2026-02-07,news,sports,Discovered from AP search,
+ind_ap_004,Associated Press,independent_media,0,multiple,https://apnews.com/article/f9c544acb8bdb0377c0e6d75af41c3cf,2026-02-26,opinion,other,Discovered from AP search,
+ind_ap_005,Associated Press,independent_media,0,polymarket,https://apnews.com/article/1f47e737f915fff00c57f03e7390b41f,2026-01-30,news,geopolitics,Discovered from AP search,
+ind_ap_006,Associated Press,independent_media,0,multiple,https://apnews.com/article/fe7435cf6efefd922aa2edb9a0e80a05,2026-03-23,news,other,Discovered from AP search,
+ind_ap_007,Associated Press,independent_media,0,polymarket,https://apnews.com/article/0a16656cd72f1694bf16a781a5b73b8e,2026-05-28,news,technology,Discovered from AP search,
+ind_ap_008,Associated Press,independent_media,0,multiple,https://apnews.com/article/f128cb98a5136bf5b8051d60b5391711,2026-02-15,news,other,Discovered from AP search,

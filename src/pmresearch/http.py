@@ -28,6 +28,9 @@ class HttpClient:
                 return response.json()
             except (requests.RequestException, ValueError) as exc:
                 last_error = exc
+                response = getattr(exc, "response", None)
+                if response is not None and response.status_code not in (429,) and response.status_code < 500:
+                    break
                 if attempt == self.max_retries - 1:
                     break
                 time.sleep(self.sleep_seconds * (2 ** attempt))
