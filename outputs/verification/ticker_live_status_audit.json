@@ -1,0 +1,546 @@
+[
+  {
+    "ticker": "KXNEXTTEAMNBA-26LJAM",
+    "publication_time": "2026-07-22T22:13:49.746Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXNEXTTEAMNBA-26LJAM"
+  },
+  {
+    "ticker": "KXOSCARNOMASPLAY-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMASPLAY-27"
+  },
+  {
+    "ticker": "KXOSCARNOMBCASTING-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMBCASTING-27"
+  },
+  {
+    "ticker": "KXOSCARNOMCIN-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMCIN-27"
+  },
+  {
+    "ticker": "KXOSCARNOMMAKEUP-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMMAKEUP-27"
+  },
+  {
+    "ticker": "KXOSCARNOMPIC-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMPIC-27"
+  },
+  {
+    "ticker": "KXOSCARNOMSCORE-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARNOMSCORE-27"
+  },
+  {
+    "ticker": "KXOSCARPIC-27",
+    "publication_time": "2026-07-22T19:08:35.423Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXOSCARPIC-27"
+  },
+  {
+    "ticker": "KXMLB-26",
+    "publication_time": "2026-07-21T23:41:00.608Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLB-26"
+  },
+  {
+    "ticker": "KXMLBALWEST-26",
+    "publication_time": "2026-07-21T23:41:00.608Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBALWEST-26"
+  },
+  {
+    "ticker": "KXMLBGAME-26JUL212140CINSEA",
+    "publication_time": "2026-07-21T23:41:00.608Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26JUL212140CINSEA"
+  },
+  {
+    "ticker": "KXMLBNLCENT-26",
+    "publication_time": "2026-07-21T23:41:00.608Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBNLCENT-26"
+  },
+  {
+    "ticker": "KXMLBGAME-26JUL211840LADPHI",
+    "publication_time": "2026-07-21T22:35:10.154Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26JUL211840LADPHI"
+  },
+  {
+    "ticker": "KXMLBNL-26",
+    "publication_time": "2026-07-21T22:35:10.154Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBNL-26"
+  },
+  {
+    "ticker": "KXBALLONDOR-26",
+    "publication_time": "2026-07-21T14:42:08.732Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXBALLONDOR-26"
+  },
+  {
+    "ticker": "KXWC-30",
+    "publication_time": "2026-07-21T14:42:08.732Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWC-30"
+  },
+  {
+    "ticker": "KXRT-SPI",
+    "publication_time": "2026-07-21T12:12:47.556Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXRT-SPI"
+  },
+  {
+    "ticker": "KXNBATEAMANNOUNCE-26LJAMES23",
+    "publication_time": "2026-07-20T22:12:21.557Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXNBATEAMANNOUNCE-26LJAMES23"
+  },
+  {
+    "ticker": "KXBERNIEMENTION-26JUL20B",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXBERNIEMENTION-26JUL20B"
+  },
+  {
+    "ticker": "KXBIGBROTHER-26DEC31",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXBIGBROTHER-26DEC31"
+  },
+  {
+    "ticker": "KXCBDECISIONEU-26JUL23",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXCBDECISIONEU-26JUL23"
+  },
+  {
+    "ticker": "KXDPZ-26JULSTORES",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXDPZ-26JULSTORES"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONAAL-26JUL23",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONAAL-26JUL23"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONGEV-26JUL22",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONGEV-26JUL22"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONINTC-26JUL23",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONINTC-26JUL23"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONTSLA-26JUL22",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONTSLA-26JUL22"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONVZ-26JUL24",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONVZ-26JUL24"
+  },
+  {
+    "ticker": "KXGOOG-26OCTHEAD",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXGOOG-26OCTHEAD"
+  },
+  {
+    "ticker": "KXLUV-26JULFARE",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXLUV-26JULFARE"
+  },
+  {
+    "ticker": "KXNAVAJOPRES-26NOV03",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXNAVAJOPRES-26NOV03"
+  },
+  {
+    "ticker": "KXPM-26JULZYNSHIP",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXPM-26JULZYNSHIP"
+  },
+  {
+    "ticker": "KXSAMOMINF-26JUL22",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXSAMOMINF-26JUL22"
+  },
+  {
+    "ticker": "KXSCHW-26JULBROK",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXSCHW-26JULBROK"
+  },
+  {
+    "ticker": "KXUE-MEX26JUNE",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXUE-MEX26JUNE"
+  },
+  {
+    "ticker": "KXUKRETAIL-26JUL24",
+    "publication_time": "2026-07-20T20:31:10.149Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXUKRETAIL-26JUL24"
+  },
+  {
+    "ticker": "KXMENWORLDCUP-26",
+    "publication_time": "2026-07-19T17:13:21.307Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMENWORLDCUP-26"
+  },
+  {
+    "ticker": "KXWCMOV-26JUL19ESPARG",
+    "publication_time": "2026-07-19T17:13:21.307Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCMOV-26JUL19ESPARG"
+  },
+  {
+    "ticker": "KXWCTOTAL-26JUL19ESPARG",
+    "publication_time": "2026-07-19T17:13:21.307Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCTOTAL-26JUL19ESPARG"
+  },
+  {
+    "ticker": "KXPGAROUNDSCORE-THOC26R4",
+    "publication_time": "2026-07-19T06:51:17.126Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXPGAROUNDSCORE-THOC26R4"
+  },
+  {
+    "ticker": "KXPGATOUR-THOC26",
+    "publication_time": "2026-07-19T06:51:17.126Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXPGATOUR-THOC26"
+  },
+  {
+    "ticker": "KXAQICITY-NYC26JUL19",
+    "publication_time": "2026-07-19T05:10:08.120Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXAQICITY-NYC26JUL19"
+  },
+  {
+    "ticker": "KXAQICITY-NYC26JUL19-130",
+    "publication_time": "2026-07-19T05:10:08.120Z",
+    "live_status": "finalized",
+    "found": true,
+    "last_price_dollars": "0.0100",
+    "liquidity_dollars": "0.0000",
+    "open_interest_fp": "1314.27",
+    "yes_bid_dollars": "0.0000",
+    "yes_ask_dollars": "1.0000",
+    "event_ticker": "KXAQICITY-NYC26JUL19",
+    "close_time": "2026-07-19T19:00:00Z"
+  },
+  {
+    "ticker": "KXWCAWARD-26BBALL",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26BBALL"
+  },
+  {
+    "ticker": "KXWCAWARD-26BBOOT",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26BBOOT"
+  },
+  {
+    "ticker": "KXWCAWARD-26BYP",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26BYP"
+  },
+  {
+    "ticker": "KXWCAWARD-26FPA",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26FPA"
+  },
+  {
+    "ticker": "KXWCAWARD-26GBALL",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26GBALL"
+  },
+  {
+    "ticker": "KXWCAWARD-26GGLOVE",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26GGLOVE"
+  },
+  {
+    "ticker": "KXWCAWARD-26SBALL",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26SBALL"
+  },
+  {
+    "ticker": "KXWCAWARD-26SBOOT",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCAWARD-26SBOOT"
+  },
+  {
+    "ticker": "KXWCGOALLEADER-26",
+    "publication_time": "2026-07-19T02:15:05.736Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCGOALLEADER-26"
+  },
+  {
+    "ticker": "KXWCFINALSONGS-26JUL20",
+    "publication_time": "2026-07-19T01:30:41.164Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCFINALSONGS-26JUL20"
+  },
+  {
+    "ticker": "KXWORLDCUPHALFTIME-26",
+    "publication_time": "2026-07-19T01:30:41.164Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWORLDCUPHALFTIME-26"
+  },
+  {
+    "ticker": "KXWORLDCUPHALFTIME-26-POS",
+    "publication_time": "2026-07-19T01:30:41.164Z",
+    "live_status": "finalized",
+    "found": true,
+    "last_price_dollars": "0.0100",
+    "liquidity_dollars": "0.0000",
+    "open_interest_fp": "352144.29",
+    "yes_bid_dollars": "0.0000",
+    "yes_ask_dollars": "1.0000",
+    "event_ticker": "KXWORLDCUPHALFTIME-26",
+    "close_time": "2026-07-19T20:45:16Z"
+  },
+  {
+    "ticker": "KXWCADVANCE-26JUL18FRAENG",
+    "publication_time": "2026-07-18T20:13:16.962Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCADVANCE-26JUL18FRAENG"
+  },
+  {
+    "ticker": "KXSCRSENS-26",
+    "publication_time": "2026-07-18T00:57:09.238Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXSCRSENS-26"
+  },
+  {
+    "ticker": "KXRT-DUNE",
+    "publication_time": "2026-07-17T20:33:38.123Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXRT-DUNE"
+  },
+  {
+    "ticker": "KXRT-OBS",
+    "publication_time": "2026-07-17T20:33:38.123Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXRT-OBS"
+  },
+  {
+    "ticker": "KXRT-ODY",
+    "publication_time": "2026-07-17T20:33:38.123Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXRT-ODY"
+  },
+  {
+    "ticker": "KXNEXTAG-29",
+    "publication_time": "2026-07-17T16:50:01.680Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXNEXTAG-29"
+  },
+  {
+    "ticker": "KXBIGBROTHERELIMINATION-26JUL16",
+    "publication_time": "2026-07-16T22:07:42.890Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXBIGBROTHERELIMINATION-26JUL16"
+  },
+  {
+    "ticker": "KXPGAR1LEAD-THOC26",
+    "publication_time": "2026-07-16T12:30:53.986Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXPGAR1LEAD-THOC26"
+  },
+  {
+    "ticker": "KXPGAROUNDSCORE-THOC26R1",
+    "publication_time": "2026-07-16T12:30:53.986Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXPGAROUNDSCORE-THOC26R1"
+  },
+  {
+    "ticker": "KXDST-27JAN01",
+    "publication_time": "2026-07-15T21:49:30.032Z",
+    "live_status": "active",
+    "found": true,
+    "last_price_dollars": "0.1900",
+    "liquidity_dollars": "0.0000",
+    "open_interest_fp": "40683.52",
+    "yes_bid_dollars": "0.1800",
+    "yes_ask_dollars": "0.1900",
+    "event_ticker": "KXDST-27JAN01",
+    "close_time": "2027-01-01T15:00:00Z"
+  },
+  {
+    "ticker": "KXWCADVANCE-26JUL15ENGARG",
+    "publication_time": "2026-07-15T18:10:24.473Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCADVANCE-26JUL15ENGARG"
+  },
+  {
+    "ticker": "KXWCADVANCE-26JUL14FRAESP",
+    "publication_time": "2026-07-14T18:12:50.621Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXWCADVANCE-26JUL14FRAESP"
+  },
+  {
+    "ticker": "KXA100WS-26JUL17",
+    "publication_time": "2026-07-14T15:00:00.000Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXA100WS-26JUL17"
+  },
+  {
+    "ticker": "KXB200WS-26JUL17",
+    "publication_time": "2026-07-14T15:00:00.000Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXB200WS-26JUL17"
+  },
+  {
+    "ticker": "KXH200WS-26JUL17",
+    "publication_time": "2026-07-14T15:00:00.000Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXH200WS-26JUL17"
+  },
+  {
+    "ticker": "KXMAYORLA-26",
+    "publication_time": "2026-07-14T10:19:35.501Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMAYORLA-26"
+  },
+  {
+    "ticker": "KXMAYORLA-26-SPRA",
+    "publication_time": "2026-07-14T10:19:35.501Z",
+    "live_status": "finalized",
+    "found": true,
+    "last_price_dollars": "0.0030",
+    "liquidity_dollars": "0.0000",
+    "open_interest_fp": "37936153.61",
+    "yes_bid_dollars": "0.0000",
+    "yes_ask_dollars": "1.0000",
+    "event_ticker": "KXMAYORLA-26",
+    "close_time": "2026-06-08T23:59:49Z"
+  },
+  {
+    "ticker": "KXMLBHRDERBY-26",
+    "publication_time": "2026-07-13T23:23:19.704Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBHRDERBY-26"
+  },
+  {
+    "ticker": "KXMLBHRDERBYLONGEST-26",
+    "publication_time": "2026-07-13T23:23:19.704Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBHRDERBYLONGEST-26"
+  },
+  {
+    "ticker": "KXMLBHRDERBYTOT-26",
+    "publication_time": "2026-07-13T23:23:19.704Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMLBHRDERBYTOT-26"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONBAC-26JUL14",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONBAC-26JUL14"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONC-26JUL14",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONC-26JUL14"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONGS-26JUL14",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONGS-26JUL14"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONJNJ-26JUL15",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONJNJ-26JUL15"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONJPM-26JUL14",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONJPM-26JUL14"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONMS-26JUL15",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONMS-26JUL15"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONNFLX-26JUL02",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONNFLX-26JUL02"
+  },
+  {
+    "ticker": "KXEARNINGSMENTIONUAL-26JUL16",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXEARNINGSMENTIONUAL-26JUL16"
+  },
+  {
+    "ticker": "KXMEDNOMJUL-26AUG01",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXMEDNOMJUL-26AUG01"
+  },
+  {
+    "ticker": "KXNEXTSCSENATOR-27JAN04",
+    "publication_time": "2026-07-13T19:27:43.417Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXNEXTSCSENATOR-27JAN04"
+  },
+  {
+    "ticker": "KXATP-26WIM",
+    "publication_time": "2026-07-12T13:40:34.944Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXATP-26WIM"
+  },
+  {
+    "ticker": "KXUFCFIGHT-26JUL11MCGHOL",
+    "publication_time": "2026-07-12T02:20:54.114Z",
+    "found": false,
+    "error": "GET failed after 4 attempts: https://external-api.kalshi.com/trade-api/v2/markets/KXUFCFIGHT-26JUL11MCGHOL"
+  }
+]

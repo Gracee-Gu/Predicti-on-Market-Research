@@ -1,6 +1,0 @@
-section,claim,support_type,support_path,claim_status,publication_status
-Introduction,Prediction-market prices acquire public meaning through platform and media presentation.,theory_source,paper/literature_review.md,exploratory_only,review_required
-Methods,Articles are linked to markets using explicit matching statuses and publication-time rules.,design_record,docs/corpus_protocol.md,exploratory_only,ready
-Methods,Framing and overreach constructs follow the Stage 3 codebook.,design_record,docs/stage3_codebook.md,exploratory_only,ready
-Results,Corpus diagnostics and associations are reproduced from Stage 4 outputs.,empirical_output,outputs/stage4/stage4_report.md,exploratory_only,ready
-Discussion,Observed associations do not establish causal effects.,interpretive_inference,docs/stage4_claim_policy.md,exploratory_only,ready

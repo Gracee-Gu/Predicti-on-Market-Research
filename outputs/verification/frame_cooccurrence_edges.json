@@ -1,0 +1,103 @@
+{
+  "prevalence": {
+    "market_probability_present": 0.8448275862068966,
+    "probability_as_public_opinion": 0.3706896551724138,
+    "representativeness_caveat": 0.0,
+    "market_quality_caveat": 0.4827586206896552,
+    "certainty_language": 0.3793103448275862,
+    "democratic_language": 0.02586206896551724,
+    "horse_race_frame": 0.853448275862069
+  },
+  "edges": [
+    {
+      "a": "market_probability_present",
+      "b": "probability_as_public_opinion",
+      "count": 42,
+      "jaccard": 0.42424242424242425
+    },
+    {
+      "a": "market_probability_present",
+      "b": "market_quality_caveat",
+      "count": 54,
+      "jaccard": 0.54
+    },
+    {
+      "a": "market_probability_present",
+      "b": "certainty_language",
+      "count": 44,
+      "jaccard": 0.4489795918367347
+    },
+    {
+      "a": "market_probability_present",
+      "b": "democratic_language",
+      "count": 3,
+      "jaccard": 0.030612244897959183
+    },
+    {
+      "a": "market_probability_present",
+      "b": "horse_race_frame",
+      "count": 97,
+      "jaccard": 0.97
+    },
+    {
+      "a": "probability_as_public_opinion",
+      "b": "market_quality_caveat",
+      "count": 30,
+      "jaccard": 0.43478260869565216
+    },
+    {
+      "a": "probability_as_public_opinion",
+      "b": "certainty_language",
+      "count": 25,
+      "jaccard": 0.4032258064516129
+    },
+    {
+      "a": "probability_as_public_opinion",
+      "b": "democratic_language",
+      "count": 3,
+      "jaccard": 0.06976744186046512
+    },
+    {
+      "a": "probability_as_public_opinion",
+      "b": "horse_race_frame",
+      "count": 41,
+      "jaccard": 0.40594059405940597
+    },
+    {
+      "a": "market_quality_caveat",
+      "b": "certainty_language",
+      "count": 25,
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "a": "market_quality_caveat",
+      "b": "democratic_language",
+      "count": 1,
+      "jaccard": 0.017241379310344827
+    },
+    {
+      "a": "market_quality_caveat",
+      "b": "horse_race_frame",
+      "count": 54,
+      "jaccard": 0.5346534653465347
+    },
+    {
+      "a": "certainty_language",
+      "b": "democratic_language",
+      "count": 1,
+      "jaccard": 0.021739130434782608
+    },
+    {
+      "a": "certainty_language",
+      "b": "horse_race_frame",
+      "count": 44,
+      "jaccard": 0.4444444444444444
+    },
+    {
+      "a": "democratic_language",
+      "b": "horse_race_frame",
+      "count": 2,
+      "jaccard": 0.02
+    }
+  ]
+}

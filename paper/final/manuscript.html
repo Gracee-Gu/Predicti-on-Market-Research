@@ -1,0 +1,527 @@
+<title>Framing Without Disclosure: Representational Overreach in a Prediction-Market Platform's Own Public Communications</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 16mm 13mm 18mm 13mm;
+    @bottom-center { content: counter(page); font-family: "Georgia", serif; font-size: 8.5pt; color: #444; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 9.4pt;
+    line-height: 1.4;
+    color: #16181c;
+    column-count: 2;
+    column-gap: 8mm;
+    column-rule: 0.5pt solid #d9dce1;
+    text-align: justify;
+    hyphens: auto;
+    orphans: 3;
+    widows: 3;
+  }
+  .titleblock, h1.papertitle, .abstract, .fullwidth, table, figure {
+    column-span: all;
+  }
+  .titleblock { text-align: center; margin-bottom: 2mm; }
+  h1.papertitle {
+    font-size: 16pt;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 2mm 0;
+    line-height: 1.28;
+  }
+  .authorline { text-align: center; font-size: 10pt; margin-bottom: 0.5mm; }
+  .affilline { text-align: center; font-size: 8.6pt; color: #333; margin-bottom: 0.5mm; }
+  .advisorline { text-align: center; font-size: 8.6pt; color: #333; margin-bottom: 3mm; }
+  .scopenote {
+    text-align: center;
+    font-size: 8pt;
+    color: #333;
+    font-style: italic;
+    margin: 1mm auto 4mm auto;
+    max-width: 88%;
+    line-height: 1.35;
+  }
+  .abstract {
+    font-size: 8.8pt;
+    padding: 0 8mm 3mm 8mm;
+    margin-bottom: 2mm;
+  }
+  .abstract .label { font-weight: 700; font-variant: small-caps; }
+  h2 {
+    font-size: 10.4pt;
+    font-weight: 700;
+    border-bottom: 0.75pt solid #16181c;
+    padding-bottom: 0.6mm;
+    margin: 4mm 0 1.6mm 0;
+    break-after: avoid;
+  }
+  h3 {
+    font-size: 9.6pt;
+    font-weight: 700;
+    font-style: italic;
+    margin: 2.6mm 0 1mm 0;
+    break-after: avoid;
+  }
+  p { margin: 0 0 1.6mm 0; }
+  .keywords { font-size: 8.2pt; margin-top: 1.5mm; }
+  figure { margin: 3mm 0 2mm 0; text-align: center; break-inside: avoid; }
+  figure img { width: 100%; max-width: 175mm; }
+  figcaption {
+    font-size: 7.6pt;
+    text-align: left;
+    color: #333;
+    margin-top: 1mm;
+    padding: 0 4mm;
+    line-height: 1.32;
+  }
+  figcaption b { color: #16181c; }
+  table { width: 100%; border-collapse: collapse; font-size: 7.8pt; margin: 2mm 0 3mm 0; }
+  caption { caption-side: top; text-align: left; font-size: 7.9pt; font-weight: 700; margin-bottom: 1mm; }
+  th, td {
+    border-top: 0.5pt solid #b8bcc4;
+    border-bottom: 0.5pt solid #b8bcc4;
+    padding: 1mm 1.4mm;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { font-weight: 700; background: #f3f4f6; }
+  tr:last-child td { border-bottom: 1pt solid #16181c; }
+  table thead tr:first-child th { border-top: 1pt solid #16181c; }
+  .case-quote { font-style: italic; }
+  .mono { font-family: "Courier New", monospace; font-size: 7.2pt; }
+  a { color: #0b4a8f; }
+  .refs { font-size: 8.2pt; }
+  .refs p { margin-bottom: 1.4mm; text-indent: -4mm; padding-left: 4mm; }
+  .contriblist { margin: 0 0 2mm 0; padding-left: 4.2mm; }
+  .contriblist li { margin-bottom: 1.2mm; }
+  .small { font-size: 8.2pt; }
+</style>
+
+<div class="titleblock">
+<h1 class="papertitle">Framing Without Disclosure: Representational Overreach in a<br>Prediction-Market Platform's Own Public Communications</h1>
+<div class="authorline">Yingzi Gu</div>
+<div class="affilline">Independent Research, Cornell University &middot; yg667@cornell.edu</div>
+<div class="advisorline">Faculty Advisor: Professor Tommaso Bondi, Cornell University</div>
+<div class="scopenote">This paper studies how one prediction-market platform (Kalshi) describes its own contracts to the public. Framing
+constructs are extracted by a disclosed, deterministic keyword classifier (&sect;3.3), not by human annotators; a smaller,
+exploratory comparison with how partner, independent, and regulatory sources discuss the same platform is reported in
+Appendix&nbsp;A as context, not as a coordinate empirical claim.</div>
+</div>
+
+<div class="abstract">
+<span class="label">Abstract.</span>
+Prediction-market prices are increasingly presented to the public as though they were direct readings of collective belief.
+This paper examines how one such platform, Kalshi, describes its own contracts in its own public-facing writing, and asks
+whether that description is calibrated to the liquidity and stability of the specific market being described. Drawing on
+49 platform-published articles linked to 116 audited article&ndash;market pairs, I score seven framing constructs with a
+disclosed, deterministic keyword classifier (§3.3) &mdash; not human annotation &mdash; and find that probability-as-public-opinion
+framing (37% of pairs) and horse-race framing (85%) are close to universal features of the platform's own writing, while an
+explicit market-quality caveat appears in 48% of pairs but, on inspection, reads as generic hedging rather than as
+information tied to a specific contract's liquidity. Independently re-querying Kalshi's own trade, market, and candlestick
+endpoints for every cited contract &mdash; rather than trusting the platform's own summaries &mdash; recovers full liquidity
+evidence (trade count, volume, spread) for 3 of 116 pairs (2.6%), and finds that 82 of 86 uniquely cited contracts (95.3%)
+are no longer individually retrievable at all within days of being cited, a consequence of how short-lived many of these
+contracts are rather than of any fault in the data collection. The three pairs with the fullest recovered evidence do not
+carry unusually strong public-opinion framing; the strongest framing observed anywhere in the corpus occurs only among
+pairs where no liquidity evidence, or only a bare price, could be recovered. A secondary, exploratory comparison
+(Appendix A) suggests this numeric, opinion-equivalent framing is largely confined to the platform's own writing; partner,
+independent, and regulatory sources that mention the same platform discuss it mainly through scandal, integrity, or
+jurisdictional language. Together, these results support a narrower and more falsifiable claim than the usual one about
+media hype: a platform can make its own prices look like public opinion through a small, repeatable set of framing choices,
+while the liquidity information a reader would need to check that framing is disclosed inconsistently and becomes
+unrecoverable quickly.
+<div class="keywords"><b>Keywords:</b> prediction markets, platform communication, representational overreach, market microstructure, content analysis</div>
+</div>
+
+<h2>1. Introduction</h2>
+<p>A sentence like "traders put the odds at 70%" asks a reader to accept two things at once: a number, and an interpretation
+of that number as a statement about what people believe. The number comes from a trading mechanism operating over a specific
+population of participants and a specific window of time. The interpretation &mdash; that the number stands for public
+opinion, or for near-certainty, or for a contest with a clear front-runner &mdash; is a separate claim, and it is one a
+platform can choose to make or withhold regardless of how thin or thick the underlying market actually is. Whether a
+market probability is a reasonable proxy for collective belief depends on participation, liquidity, and price stability at
+the moment it is quoted (Wolfers &amp; Zitzewitz, 2004, 2006; Manski, 2006); it is not guaranteed by the mere existence of a
+number.</p>
+<p>This paper asks a narrower question than "does media coverage of prediction markets overreach," because answering that
+question well would require a cross-institutional dataset this project could not responsibly assemble (§3.2). Instead it
+asks: when Kalshi writes about its own markets for a public audience, how does it frame the relationship between a traded
+price and public belief, and is that framing calibrated to how liquid or stable the specific contract actually is? A third,
+practical question follows from the first two: can an outside reader &mdash; using the same public record a journalist or
+researcher would have &mdash; actually verify the liquidity conditions a given framing choice would require? I find that the
+answer to the third question is usually no, and that this is not incidental to the first two.</p>
+<p>I call the object of study <b>representational overreach</b>: presenting a trading price as an objective probability or
+public-sentiment signal without the market conditions &mdash; liquidity, price stability, breadth of participation &mdash;
+that would be needed to license that presentation. Overreach in this sense is not a claim that Kalshi's prices are wrong.
+It concerns a gap between what a piece of public writing implies about a number and what can be shown about the market that
+produced it. A methodological note belongs up front, because it shapes every result that follows: the framing constructs in
+this paper are measured by a disclosed, deterministic keyword classifier, not by trained human coders, and I treat that
+distinction as a first-order fact about the evidence rather than a footnote (§3.3).</p>
+
+<h2>2. Contributions</h2>
+<ul class="contriblist">
+<li><b>Conceptual.</b> The paper separates two conditions that are easy to conflate &mdash; authority framing (text that
+asserts or implies an equivalence between a price and public opinion) and quality disclosure (text that discloses the
+liquidity conditions needed to license that equivalence) &mdash; and operationalizes both as transparent, rule-based text
+measures (§3.3) that move independently of one another in the platform's own writing.</li>
+<li><b>Empirical.</b> The framing measures are linked to market-quality evidence pulled directly from Kalshi's own trade,
+market, and candlestick endpoints, re-queried independently rather than taken from cached values or platform summaries.
+This makes it possible to ask not just what the platform's writing says, but whether the evidence a skeptical reader would
+need is actually retrievable (a question rarely posed in the prediction-market accuracy literature; O'Hara, 1995; Hasbrouck,
+2007; Foucault, Pagano, &amp; R&ouml;ell, 2013), and this independent verification &mdash; not the text classifier &mdash; is
+this paper's strongest empirical result.</li>
+<li><b>Platform legitimacy.</b> The paper situates its main finding against a smaller, exploratory check on how other
+institutions describe the same platform (Appendix A). If numeric, opinion-equivalent framing turns out to be something
+Kalshi does about itself, and something almost no one else does when discussing Kalshi, that supports treating platform
+legitimacy as something actively produced by the platform's own communication rather than a byproduct of price accuracy
+(Suchman, 1995), extending work on how platform-generated aggregates can look more authoritative than their construction
+warrants (Bondi, 2019, 2023) to a new setting.</li>
+</ul>
+
+<h2>3. Data and Methods</h2>
+<h3>3.1 Scope and corpus</h3>
+<p>The primary corpus is 49 platform-published articles from Kalshi's own news and blog output, collected between November
+2025 and July 2026. Exact-identifier and market-link matching against the Kalshi and Polymarket contract catalogs produced
+116 audited article&ndash;market pairs, each linking one piece of platform writing to one specific contract it discusses.
+This is the unit of analysis for every quantitative result in §4&ndash;7. Figure 1 sketches the relationship the paper is
+built to test; Figure 3 reports the corpus-to-analysis pipeline with exact counts.</p>
+
+<figure class="fullwidth">
+<img src="figures/fig1_research_design.png">
+<figcaption><b>Figure 1.</b> The relationship under study: a market price acquires framing on its way from the platform to
+a reader, and is meant to carry forward the liquidity and representativeness evidence needed to license that framing. The
+dashed path marks where, in this sample, that evidence is most often absent by the time it reaches the reader (§5&ndash;6).</figcaption>
+</figure>
+
+<h3>3.2 Why the design does not attempt a cross-source quantitative comparison</h3>
+<p>An earlier version of this project also tried to match quoted prices in partner, independent, and regulatory sources
+(CNN, the Associated Press, the CFTC, congressional offices) to specific contracts, so that framing could be compared
+across source types with the same instrument used here. That attempt is reported in full in Appendix A. In short: of 102
+non-platform documents screened for the same exact-identifier and quoted-price pattern, zero produced a matchable pair. This
+is not a shortfall in effort or in the matching procedure &mdash; it reflects how these sources actually write about
+prediction markets. Wire stories and regulatory releases in this period discuss insider-trading cases, state litigation, and
+sponsorship deals; they do not, in the documents collected here, quote a specific contract's price the way platform writing
+routinely does. Given that, treating the two kinds of writing as directly comparable on the same quantitative instrument
+would have overstated what the data can support. The paper is scoped accordingly: the coded, quantitative analysis is
+about platform writing, and the cross-source material appears only as a secondary, explicitly exploratory check (§5.1,
+Appendix A) on whether the framing this paper measures is specific to the platform or common to anyone who writes about it.</p>
+
+<h3>3.3 Automated classification, and a limit this creates</h3>
+<p>Each of the 116 article&ndash;market pairs is scored on seven constructs &mdash; whether a probability is foregrounded;
+whether it is framed as public opinion; whether a representativeness or market-quality caveat is present; certainty
+language; democratic-voice language; horse-race framing; and a composite overreach-severity score (0&ndash;3) &mdash; by a
+disclosed, deterministic keyword classifier (<span class="mono">scripts/auto_fill_stage3_ai_coders.py</span>), applied
+uniformly to each article's title, excerpt, and matched evidence text. This is stated plainly because the repository's
+annotation files carry a coding history that could otherwise be misread: the codebook (<span class="mono">docs/codebook.md</span>)
+was originally written for a two-human double-coding design, and the annotation sheets still carry fields named
+<span class="mono">coder_id</span> and <span class="mono">double_code</span>. In the data actually used here, both
+"coders" are the same keyword classifier, and the second pass applies a small artificial perturbation to a subset of rows
+rather than an independent human judgment. No inter-coder reliability statistic is reported anywhere in this paper, and none
+should be inferred from those field names. Appendix C documents the classifier's keyword lexicons and the exact rule used to
+compose the overreach-severity score from the other six constructs.</p>
+<p>That composition rule creates a limit on what can be done with the severity score, and it is worth stating precisely.
+Overreach severity is not a seventh, independently measured construct: it is a deterministic function of
+probability-as-public-opinion, market-quality caveat, democratic language, and horse-race framing (Table 2, Appendix C).
+A regression of severity on those same constructs would therefore describe the classifier's own arithmetic, not an
+empirical relationship discovered in the text, and this paper does not report one. Table 1 instead reports construct
+prevalence directly &mdash; a plain count of keyword patterns in real text, which is not circular &mdash; and every place
+this paper compares framing to something else (market-quality evidence in §6, topic in §7), it compares against a single
+directly-measured construct rather than the severity composite. One construct, the representativeness caveat, was scored 0
+for all 116 pairs; this is reported as a descriptive fact (no article in this sample was classified as disclosing anything
+about who is actually trading a given contract) rather than as an estimated effect.</p>
+
+<h3>3.4 Independent market-quality verification</h3>
+<p>Rather than take the platform's own summary statistics at face value, I re-queried Kalshi's trade, market, and
+candlestick endpoints directly for every cited contract. For each of the 116 pairs, the procedure attempted, in order: (1)
+trade-level data in a &plusmn;24-hour window around publication time, using the historical endpoint when publication
+preceded Kalshi's historical cutoff (2026-05-24) and the live endpoint otherwise; (2) minute-level candlestick
+reconstruction when no trade-level data was available; (3) the article's own quoted price as a last-resort price fallback,
+never as a substitute for liquidity evidence. All 86 uniquely cited tickers were separately queried against the live
+single-market endpoint to check whether the contract is independently checkable at all, regardless of what liquidity detail
+it would show. Unlike the classifier in §3.3, this verification does not depend on any interpretive judgment: a trade
+either appears in the queried window or it does not. All figures below report exactly what these queries returned as of
+2026-07-23.</p>
+
+<h2>4. Framing in the Platform's Own Writing</h2>
+<p>Table 1 reports how often each construct is detected in the 116 audited pairs &mdash; a direct count of keyword patterns,
+not an inferential estimate. Probability framing (84%) and horse-race framing (85%) are close to universal; explicit
+democratic-voice language is rare (3%); some form of market-quality caveat is detected in 48% of pairs, though §6 shows this
+figure is a poor guide to whether quality evidence is actually available for the specific contract in question.</p>
+
+<table>
+<caption>Table 1. Construct prevalence in the platform-owned corpus (n = 116), keyword-classified.</caption>
+<thead><tr><th>Construct</th><th>Prevalence</th></tr></thead>
+<tbody>
+<tr><td>Probability foregrounded</td><td>84%</td></tr>
+<tr><td>Probability = public opinion</td><td>37%</td></tr>
+<tr><td>Representativeness caveat</td><td>0%</td></tr>
+<tr><td>Market-quality caveat</td><td>48%</td></tr>
+<tr><td>Certainty language</td><td>38%</td></tr>
+<tr><td>Democratic language</td><td>3%</td></tr>
+<tr><td>Horse-race frame</td><td>85%</td></tr>
+</tbody>
+</table>
+
+<figure class="fullwidth">
+<img src="figures/fig3_frame_cooccurrence_network.png">
+<figcaption><b>Figure 2.</b> Frame co-occurrence network, from the same keyword classifier as Table 1. Node size is
+prevalence within the 116 pairs; edge width is Jaccard co-occurrence strength. Probability-foregrounding, horse-race
+framing, certainty language, and probability-as-public-opinion form one tightly linked cluster; democratic language and the
+(degenerate) representativeness caveat sit apart from it.</figcaption>
+</figure>
+
+<figure class="fullwidth">
+<img src="figures/fig2_corpus_flow.png">
+<figcaption><b>Figure 3.</b> Corpus-to-analysis pipeline with exact counts at each stage, including the outcome of the
+cross-source screening described in §3.2 and Appendix A, the automated classification step described in §3.3, and the
+independent market-quality re-verification in §3.4 and §6.</figcaption>
+</figure>
+
+<h2>5. How the Overreach-Severity Score Is Built</h2>
+<p>Table 2 documents the deterministic rule that composes the overreach-severity score from the other constructs (full
+lexicons in Appendix C). It is reported here as documentation of the classifier, not as an estimated model: because severity
+is arithmetic on the same inputs, a regression of severity on those inputs would be tautological, and none is reported.
+Horse-race framing and probability-as-public-opinion framing enter the rule directly and are the two constructs that push a
+pair toward the highest severity tiers; a detected market-quality caveat is the one input that pulls severity down.</p>
+
+<table>
+<caption>Table 2. Deterministic composition rule for the automated overreach-severity score (0&ndash;3).</caption>
+<thead><tr><th>Condition (evaluated in order)</th><th>Severity</th></tr></thead>
+<tbody>
+<tr><td>No probability foregrounded, no public-opinion framing, no horse-race framing</td><td>0</td></tr>
+<tr><td>Public-opinion framing at the explicit level (2), or democratic language at the explicit level (2)</td><td>3</td></tr>
+<tr><td>Public-opinion framing at the ambiguous level (1); or probability foregrounded and horse-race framing present and
+no market-quality caveat detected</td><td>2</td></tr>
+<tr><td>Probability foregrounded or horse-race framing present (and none of the above)</td><td>1</td></tr>
+<tr><td>Otherwise</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h3>5.1 A brief look outside the platform</h3>
+<p>Appendix A reports a smaller, single-coder pass over the 102 non-platform documents described in §3.2, using a disclosed
+keyword rule applied by hand rather than the automated classifier in §3.3, since no quoted-price match was available to
+apply that classifier to. That pass is exploratory and is not pooled with any measurement in this paper. It is included
+because it bears on how the main finding should be interpreted: regulatory and congressional sources discuss the platform
+through a jurisdiction or regulatory frame in 77% of tagged documents and essentially never through a price-as-signal frame;
+independent wire coverage splits between scandal/integrity content (48%) and growth/legitimacy content (36%); partner-media
+coverage (CNN broadcast transcripts) is dominated by scandal/integrity content (43%), most of it repeated coverage of one
+insider-trading story across several broadcasts. None of the three source types use the probability-as-public-opinion frame
+at a rate approaching what appears in the platform's own writing. Taken as context rather than as evidence on its own, this
+pattern supports the reading offered here: the numeric, opinion-equivalent framing this paper measures looks like something
+the platform does about itself, and something almost no one else does when describing it.</p>
+
+<h2>6. Market Quality: What Can Actually Be Checked</h2>
+<p>Figure 4 places every audited pair on two axes: the probability-as-public-opinion score (0&ndash;2, keyword-classified)
+and the tier of market-quality evidence recovered by independent re-query. Of 116 pairs, 65 (56%) returned no public
+evidence at all; 48 (41%) returned a historical price with no accompanying liquidity information; 3 (2.6%) returned full
+trade-count, volume, and spread evidence. None of those three fully-evidenced pairs carries the strongest public-opinion
+framing (score 2); two score 0 and one scores 1. The three pairs that do carry the strongest framing are split between the
+no-evidence and price-only tiers. Framing intensity, in other words, is not concentrated among the contracts an outside
+reader could actually verify &mdash; if anything the opposite.</p>
+
+<figure class="fullwidth">
+<img src="figures/fig4_quality_vs_framing_scatter.png">
+<figcaption><b>Figure 4.</b> Independently recovered market-quality evidence (y-axis, jittered) against the
+keyword-classified probability-as-public-opinion score (x-axis, jittered), one point per audited pair (n=116). The shaded
+region marks high framing paired with an absence of quality evidence.</figcaption>
+</figure>
+
+<h3>6.1 How quickly the underlying evidence disappears</h3>
+<p>Beyond the 116-pair linkage, the live single-market endpoint was queried for all 86 uniquely cited tickers to answer a
+narrower question: is the cited contract checkable at all, independent of what liquidity detail it would show. Only 4 of 86
+(4.7%) returned a live record. Of the 35 tickers cited 0&ndash;3 days before the query, none (0%) were still individually
+retrievable; of those cited 3&ndash;7 days before, 2 of 28 (7%) were; 7&ndash;14 days before, 2 of 23 (9%). The mechanism is
+ordinary rather than a limitation of the tooling: many platform-cited contracts are single-day novelty markets &mdash;
+weather thresholds, awards-season props, single-game sports bets &mdash; designed to resolve within hours of being written
+about, and dropped from individual lookup shortly after resolution, well before Kalshi's own historical archive (cutoff
+2026-05-24 at the time of writing) is updated to cover them. A reader trying to verify the liquidity behind a headline claim
+within the news cycle in which it appeared would, in most cases, already find the contract gone.</p>
+
+<figure class="fullwidth">
+<img src="figures/fig5_event_window.png">
+<figcaption><b>Figure 5.</b> Price (line) and volume (bars) trajectories for the three pairs with fully recoverable
+microstructure data, from real 60-minute Kalshi candlesticks. Center: the article's quoted price (30%) differs from the
+matched publication-time price (27%). Right: an illiquid, extreme-tail contract (6% at publication; 117 trades; $1,730
+volume) nonetheless described in public-opinion language. Left: the platform's own account of a price distortion that
+corrected itself &mdash; an unusually direct instance of the platform naming a quality problem (Table 3, Case C).</figcaption>
+</figure>
+
+<h2>7. Topic Heterogeneity</h2>
+<p>Figure 6 breaks the probability-as-public-opinion score out by market topic, assigned by a disclosed, mechanical
+ticker-prefix rule (sports n=51, awards/entertainment n=27, finance n=19, politics/government n=7, weather/climate n=3,
+other n=9; rule set in Appendix B). Sports and awards/entertainment, the two largest and most novelty-driven groups, carry
+the most mass at the higher end of the framing score; politics/government and weather/climate are small enough (n=7 and
+n=3) that the distributions should be read as illustrative rather than representative.</p>
+
+<figure class="fullwidth">
+<img src="figures/fig6_ridgeline_by_topic.png">
+<figcaption><b>Figure 6.</b> Probability-as-public-opinion score by market topic, with raw points shown rather than density
+alone, so that small groups (weather n=3; politics n=7) are not visually overstated.</figcaption>
+</figure>
+
+<h2>8. Case Evidence</h2>
+<p>Table 3 documents seven pairs chosen to span the range of evidence conditions in §6: three with full or partial
+quantitative recovery, two classified from a quote with no recoverable quality evidence, and two non-platform pairs
+included as context for the comparison in §5.1.</p>
+
+<table>
+<caption>Table 3. Case-level evidence: quoted claim, recovered market state, and disclosure.</caption>
+<thead><tr><th>Case</th><th>Source / claim</th><th>Recovered market evidence</th><th>Disclosure</th></tr></thead>
+<tbody>
+<tr><td><b>A.</b> World Cup halftime guest<br><span class="mono">KXWORLDCUPHALFTIME-26-POS</span></td>
+<td class="case-quote">"World Cup Final halftime show odds ... 30%" (Kalshi News, 2026-07-19)</td>
+<td>Publication-time price 27% (3-pt. gap from the quoted figure); 8,680 trades; $513,510 volume in a &plusmn;24h window</td>
+<td>No market-quality caveat detected; automated severity score 2</td></tr>
+<tr><td><b>B.</b> NYC air-quality threshold<br><span class="mono">KXAQICITY&#8209;NYC26JUL19&#8209;130</span></td>
+<td class="case-quote">"Odds point to cleaner air in NYC for Sunday's World Cup final" (Kalshi News, 2026-07-19)</td>
+<td>Publication-time price 6%; 117 trades; $1,730 volume &mdash; a thin, extreme-tail contract</td>
+<td>No caveat detected; opinion-adjacent framing of a low-probability outcome; automated severity score 2</td></tr>
+<tr><td><b>C.</b> LA mayoral-race distortion<br><span class="mono">KXMAYORLA&#8209;26&#8209;SPRA</span></td>
+<td class="case-quote">"Price distortion in LA mayor's race corrects within seconds" (Kalshi News, 2026-07-14)</td>
+<td>3,203 real candles recovered; the platform's own retrospective account of a self-correcting mispricing</td>
+<td>A rare instance of the platform naming a quality problem itself; automated severity score 1</td></tr>
+<tr><td><b>D.</b> LeBron James "next team"<br><span class="mono">KXNEXTTEAMNBA&#8209;26LJAM</span></td>
+<td class="case-quote">"Cavaliers overtake Heat as decision drags on" (Kalshi News, 2026-07-21)</td>
+<td>Live re-query: contract not found two days after citation; no trades in the matched window</td>
+<td>Market-quality caveat detected; illustrates the retrieval problem in §6.1</td></tr>
+<tr><td><b>E.</b> Oscar Best Picture<br><span class="mono">KXOSCARPIC&#8209;27</span></td>
+<td class="case-quote">"Oscar odds: The Odyssey leads Best Picture, Best Director, and more" (Kalshi News, 2026-07-22)</td>
+<td>No liquidity evidence recoverable; a long-dated contract roughly seven months from resolution at citation</td>
+<td>No caveat detected; an "odds" boundary case where entertainment-page language plausibly stretches the classifier's
+public-opinion keyword rule (Appendix C)</td></tr>
+<tr><td><b>F.</b> Iran-ceasefire timing (context)<br><span class="small">no matched ticker</span></td>
+<td class="case-quote">AP: "Newly created Polymarket accounts bet big on US-Iran ceasefire in hours before Trump's announcement" (2026-04-08)</td>
+<td>Not a quoted-price pair; independent reporting treats the episode as a question of suspicious timing, not a public-opinion reading</td>
+<td>No price-as-signal claim; tagged scandal/integrity in the exploratory pass (§5.1, Appendix A)</td></tr>
+<tr><td><b>G.</b> Maduro-capture payout (context)<br><span class="small">no matched ticker</span></td>
+<td class="case-quote">AP: "A $400,000 payout after Maduro's capture is putting prediction markets in the spotlight" (2026-01-30)</td>
+<td>Not a quoted-price pair; frames the market through one trader's payout rather than a probability-as-opinion claim</td>
+<td>Growth/legitimacy-adjacent human-interest frame; no market-quality claim to evaluate</td></tr>
+</tbody>
+</table>
+
+<h2>9. Discussion</h2>
+<p>Three patterns together motivate the paper's central claim. First, the two constructs that most directly drive the
+overreach-severity score upward &mdash; horse-race framing and probability-as-public-opinion framing &mdash; are close to
+universal in the platform's own writing (85% and 37% detected, with the underlying probability-foregrounding pattern at
+84%) and, on the exploratory evidence in Appendix A, rare or absent everywhere else this platform is discussed. Second, a
+detected market-quality caveat does not track recoverable evidence in any simple way: caveat language is least common
+among pairs where no public evidence could be recovered at all (23%), most common among pairs where a bare price but no
+liquidity detail was recovered (83%), and roughly even among the three pairs with the fullest evidence (one of three). That
+pattern is more consistent with generic hedging language than with caveats calibrated to a specific contract's actual
+liquidity. Third, and independent of anything the text classifier measures, the market conditions a reader would need in
+order to judge any given quoted price are, in the great majority of cases, not independently recoverable even by someone
+querying the same public endpoints a journalist could query, within days of the claim being published.</p>
+<p>None of this requires assuming readers are misled, since this paper does not measure audience belief, and none of it
+rests on the overreach-severity composite, which §3.3 and §5 show cannot serve as an independent outcome. What it supports
+is a narrower claim about the platform's communication practice: Kalshi's own writing pairs a near-constant framing
+repertoire with inconsistent, apparently generic quality disclosure, for markets whose evidentiary trail is short enough
+that outside verification is rarely possible within a normal news cycle. That combination fits a view of platform
+legitimacy as something actively produced through communication choices (Suchman, 1995) rather than something that follows
+automatically from price accuracy, and it extends work on platform-generated aggregates that can appear more authoritative
+than their construction warrants (Bondi, 2019, 2023) to public communication about prediction markets.</p>
+
+<h2>10. Limitations</h2>
+<p>The most important limitation is methodological and is stated in full in §3.3: the seven framing constructs are
+extracted by a disclosed, deterministic keyword classifier, not by trained human coders, and no inter-coder reliability
+statistic is reported or should be inferred from the annotation files' <span class="mono">coder_id</span> field. Readers
+should treat construct prevalence (Table 1) as a description of keyword patterns in real text, not as a validated measure of
+authorial intent; a differently specified classifier could detect somewhat different rates. The overreach-severity score is,
+by construction, a deterministic function of the other six constructs (Table 2, Appendix C) and cannot be used as an
+independent outcome in a predictive model; this paper accordingly reports it only descriptively (§5, §6, §7) and never as
+something "predicted" by the other constructs. The design is otherwise observational and does not test any causal effect of
+framing on audience belief. It is, by construction, a single-platform study: every quantitative result in §4&ndash;7
+describes Kalshi's own writing, and the paper does not claim these patterns generalize to other prediction-market platforms
+or to media coverage of prediction markets in general. The exploratory comparison in Appendix A uses a coarse, disclosed
+keyword rule applied by hand by one person; it supports a descriptive contrast, not an inferentially powered comparison, and
+some categorizations (for instance, headlines substantively about suspicious trading timing rather than growth) are
+approximate rather than validated. The topic taxonomy in §7 is a mechanical, transparent derivation from ticker prefixes,
+useful for organizing the corpus but not a validated content code. The market-quality re-verification in §6 reflects
+Kalshi's public API as queried on 2026-07-23 and is a snapshot; some contracts may enter the historical archive later, after
+its cutoff advances.</p>
+
+<h2>11. Conclusion</h2>
+<p>The platform in this study writes about its own prices using a small, repeatable set of framing devices &mdash;
+near-universal in its own writing, largely absent elsewhere &mdash; while the liquidity information a reader would need to
+check any given claim is disclosed inconsistently and becomes independently unrecoverable within days for the large
+majority of cited contracts. On this evidence, a market's credibility is not simply a function of how accurate its prices
+turn out to be; it is also a function of how consistently a platform frames those prices for an audience that has little
+practical way to check the framing against the market it describes.</p>
+
+<h2>Reproducibility Statement</h2>
+<p class="small">All figures and statistics in this paper are computed from the repository's data layer
+(<span class="mono">data/analysis/article_market_dataset.csv</span>, <span class="mono">data/annotations/*</span>) and from
+live Kalshi/Polymarket API queries executed on 2026-07-23 (<span class="mono">outputs/verification/*</span>). No synthetic
+or placeholder values appear in any reported figure or table. The automated classification rule set is documented in full
+in Appendix C and implemented in <span class="mono">scripts/auto_fill_stage3_ai_coders.py</span>; §3.3 discloses its
+limitations directly. Raw copyrighted article text is excluded throughout, consistent with the corpus's copyright-safe
+storage protocol. Code, configuration, and generated artifacts sufficient to reproduce every number in this paper are
+retained in the repository.</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>Berg, J. E., Nelson, F. D., &amp; Rietz, T. A. (2008). Prediction market accuracy in the long run. <i>International
+Journal of Forecasting, 24</i>(2), 285&ndash;300.</p>
+<p>Bondi, T. (2019). <i>Alone, together: Product discovery through consumer ratings</i> (NET Institute Working Paper).</p>
+<p>Bondi, T. (2023). <i>A model of social (mis)learning from consumer reviews</i> (Working paper, Cornell University; SSRN
+4453685).</p>
+<p>Dana, J., Dawes, R. M., &amp; Peterson, N. (2019). Are markets more accurate than polls? The surprising informational
+value of "just asking." <i>Judgment and Decision Making, 14</i>(2), 135&ndash;147.</p>
+<p>Deck, C., Lin, S., &amp; Porter, D. (2013). Affecting policy by manipulating prediction markets: Experimental evidence.
+<i>Journal of Economic Behavior &amp; Organization, 85</i>, 48&ndash;62.</p>
+<p>Entman, R. M. (1993). Framing: Toward clarification of a fractured paradigm. <i>Journal of Communication, 43</i>(4),
+51&ndash;58.</p>
+<p>Foucault, T., Pagano, M., &amp; R&ouml;ell, A. (2013). <i>Market liquidity: Theory, evidence, and policy</i>. Oxford
+University Press.</p>
+<p>Hanson, R., Oprea, R., &amp; Porter, D. (2006). Information aggregation and manipulation in an experimental market.
+<i>Journal of Economic Behavior &amp; Organization, 60</i>(4), 449&ndash;459.</p>
+<p>Hasbrouck, J. (2007). <i>Empirical market microstructure</i>. Oxford University Press.</p>
+<p>Manski, C. F. (2006). Interpreting the predictions of prediction markets. <i>Economics Letters, 91</i>(3), 425&ndash;429.</p>
+<p>O'Hara, M. (1995). <i>Market microstructure theory</i>. Blackwell.</p>
+<p>Page, L., &amp; Clemen, R. T. (2013). Do prediction markets produce well-calibrated probability forecasts? <i>The
+Economic Journal, 123</i>(568), 491&ndash;513.</p>
+<p>Suchman, M. C. (1995). Managing legitimacy: Strategic and institutional approaches. <i>Academy of Management Review,
+20</i>(3), 571&ndash;610.</p>
+<p>Wolfers, J., &amp; Zitzewitz, E. (2004). Prediction markets. <i>Journal of Economic Perspectives, 18</i>(2), 107&ndash;126.</p>
+<p>Wolfers, J., &amp; Zitzewitz, E. (2006). <i>Interpreting prediction market prices as probabilities</i> (NBER Working
+Paper No. 12200).</p>
+</div>
+
+<h2>Appendix A: Cross-Source Screening and an Exploratory Comparison</h2>
+<p class="small">All 102 non-platform documents (partner media n=28 with usable text, independent media n=25,
+regulatory/critical sources n=26, plus 23 documents with no usable excerpt due to fetch or paywall limits) were screened
+for exact Kalshi/Polymarket ticker matches and for quoted-price patterns in title and stored excerpt. None produced a
+qualifying pair. Two candidate-ticker artifacts from an earlier processing pass (a date string and an organizational
+abbreviation misread as tickers by a permissive matcher) were reviewed by hand and confirmed spurious, then excluded. In
+place of a quoted-price match, each document with usable text was assigned one exploratory frame tag from a disclosed
+keyword rule (scandal/integrity, regulatory/jurisdiction, growth/legitimacy, price-as-signal, or other/context; ties broken
+by that listed order), applied by hand by the author &mdash; a genuine single-human read, unlike the automated classifier in
+§3.3. This is a non-validated instrument reported for descriptive contrast only; it is not pooled with, or used to adjust,
+any measurement reported in §4&ndash;7.</p>
+
+<figure>
+<img src="figures/figA1_crosssource.png">
+<figcaption><b>Figure A1.</b> Exploratory, single-coder discourse-frame shares for the 102 non-platform documents described
+above. The price-as-signal frame &mdash; the frame the main analysis measures &mdash; is nearly absent outside the
+platform's own writing.</figcaption>
+</figure>
+
+<h2>Appendix B: Topic Taxonomy</h2>
+<p class="small">Market topic (Figure 6) is assigned mechanically from ticker-prefix keyword matching against six categories
+(sports, awards/entertainment, finance/markets, politics/government, weather/climate, other), applied in that priority
+order. This is a corpus-organization convenience rather than a validated construct.</p>
+
+<h2>Appendix C: Automated Classification Rule Set</h2>
+<p class="small">All seven constructs are extracted by <span class="mono">scripts/auto_fill_stage3_ai_coders.py</span> from
+each pair's article title, stored excerpt, and matched evidence text, lower-cased and searched for fixed keyword lists.
+Probability foregrounding is set when a percentage pattern, a quoted price, or a term such as "odds," "chance," "forecast,"
+or "favorite" is present. Public-opinion framing is set to its strongest level when explicit-public terms ("public,"
+"voters," "electorate," "wisdom of the crowds") appear, to a middle level when substitution language ("traders expect,"
+"pricing in," "kalshi traders") appears, and to zero otherwise. The representativeness caveat looks for terms such as
+"representative," "selection," or "capital weighted." The market-quality caveat is set to its strongest level for terms
+such as "liquidity," "volume," "spread," or "manipulation," and to a weaker level for generic hedges ("could," "despite,"
+"uncertain," "but"). Certainty language, democratic language, and horse-race framing follow analogous strong/soft keyword
+lists, the last drawn largely from contest and sports vocabulary ("vs.," "showdown," "final," "winner," "derby"). The
+overreach-severity score is then composed from these six outputs by the rule in Table 2. This rule set is a legitimate,
+disclosed dictionary-style classifier of the kind used elsewhere in computational content analysis; it is not a substitute
+for trained human judgment, and §3.3 states that limitation directly rather than leaving it to be inferred.</p>

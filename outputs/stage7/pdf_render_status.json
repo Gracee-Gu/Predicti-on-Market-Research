@@ -1,9 +1,0 @@
-{
-  "stage": 7,
-  "status": "unavailable",
-  "alignment_status": "empirical_recovery_required",
-  "returncode": null,
-  "stdout": "",
-  "stderr": "Pandoc is not installed.",
-  "pdf_path": null
-}

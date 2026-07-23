@@ -1,11 +1,17 @@
 # Data and Code Availability Statement
 
-The code, configuration files, construct definitions, collection protocols, annotation schema, analysis scripts, tests, and audit records for this study are maintained in the project repository.
+The code, configuration files, construct definitions, collection protocols, annotation schema,
+analysis scripts, and tests for this study are maintained in this repository. See `docs/REPRODUCE.md`
+for the full reproduction sequence.
 
-The empirical claim classification for this release is `exploratory_only`.
+The paper's evidentiary status is stated in its abstract, §3.3, and §10 (Limitations): a
+single-platform, observational study whose seven framing constructs are scored by a disclosed,
+deterministic keyword classifier rather than human coders, combined with independently
+re-verified market-quality evidence and one secondary, exploratory cross-source comparison
+(Appendix A). Every reported figure and statistic traces to
+`data/analysis/article_market_dataset.csv`, `data/annotations/`, or the live-API re-verification
+artifacts in `outputs/verification/`.
 
-Raw copyrighted article text is excluded from the public reproducibility package by default. The repository retains source metadata, hashes, excerpts where permitted, and documented retrieval and matching procedures. Credentials, private keys, access tokens, and local environment files are excluded.
-
-The current corpus and analysis limitations—including source concentration, market-quality coverage, and coding provenance—must be evaluated using the Stage 3–5 audit outputs before interpreting the results.
-
-A machine-readable Stage 6 capsule manifest records the relative path, size, and SHA-256 digest of each included file.
+Raw copyrighted article text is excluded from version control by default (see `docs/corpus_protocol.md`).
+The repository retains source metadata, hashes, excerpts where permitted, and documented retrieval and
+matching procedures. Credentials, private keys, access tokens, and local environment files are excluded.
