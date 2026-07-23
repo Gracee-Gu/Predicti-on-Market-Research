@@ -1,0 +1,7 @@
+{
+  "stage": 5,
+  "stage4_claim_status": "exploratory_only",
+  "claim_status_source": "outputs/stage4/input_audit.json",
+  "missing_stage4_outputs": [],
+  "implementation_ready": true
+}

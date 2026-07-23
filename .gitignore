@@ -7,6 +7,7 @@ __pycache__/
 .DS_Store
 uv.lock
 prediction_market_stage4_overlay.zip
+prediction_market_stage5_overlay.zip
 
 # Raw or copyrighted source material is local-only.
 data/raw/*

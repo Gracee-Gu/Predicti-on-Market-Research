@@ -1,0 +1,3 @@
+# Abstract Template
+
+Prediction markets are increasingly presented as public signals about elections, policy, and social outcomes. This study examines when media descriptions of market probabilities exceed what market participation and quality can substantiate. We combine a structured media corpus, article–market matching, coded framing constructs, and publication-aligned market evidence. The current empirical status is inserted automatically from the Stage 4 audit. Results are reported at the strongest level allowed by the claim gates. The study contributes a framework for distinguishing numerical market signals from claims about public opinion, collective belief, or democratic representation.
