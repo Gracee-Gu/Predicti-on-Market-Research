@@ -74,6 +74,12 @@ class KalshiCollector:
     def historical_cutoff(self) -> dict:
         return self.client.get_json(f"{self.base_url}/historical/cutoff")
 
+    def event(self, event_ticker: str, with_nested_markets: bool = False) -> dict:
+        return self.client.get_json(
+            f"{self.base_url}/events/{event_ticker}",
+            {"with_nested_markets": str(with_nested_markets).lower()},
+        )
+
     def markets(
         self,
         status: str | None = None,
@@ -86,6 +92,15 @@ class KalshiCollector:
     ) -> Iterator[dict]:
         path = "/historical/markets" if historical else "/markets"
         params = {"status": status} if status and not historical else {}
+        if not historical:
+            if tickers:
+                params["tickers"] = ",".join(tickers)
+            if event_ticker:
+                params["event_ticker"] = event_ticker
+            if series_ticker:
+                params["series_ticker"] = series_ticker
+            if exclude_mve:
+                params["mve_filter"] = "exclude"
         if historical:
             params.update(
                 self._historical_market_params(
@@ -96,6 +111,14 @@ class KalshiCollector:
                 )
             )
         yield from self._paginate(path, "markets", params, max_pages=max_pages)
+
+    def market(self, ticker: str) -> dict:
+        payload = self.client.get_json(f"{self.base_url}/markets/{ticker}")
+        return payload.get("market", {})
+
+    def historical_market(self, ticker: str) -> dict:
+        payload = self.client.get_json(f"{self.base_url}/historical/markets/{ticker}")
+        return payload.get("market", {})
 
     def trades(
         self,
@@ -136,3 +159,9 @@ class KalshiCollector:
             },
         )
         return payload.get("candlesticks", [])
+
+    def orderbook(self, ticker: str, depth: int = 0) -> dict:
+        return self.client.get_json(
+            f"{self.base_url}/markets/{ticker}/orderbook",
+            {"depth": depth},
+        )

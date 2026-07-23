@@ -20,12 +20,16 @@ def main() -> None:
     parser.add_argument("--config", default="config/stage2.yaml")
     parser.add_argument("--seed-file", default=None)
     parser.add_argument("--output", default=None)
+    parser.add_argument("--timeout-seconds", type=float, default=30.0)
+    parser.add_argument("--max-retries", type=int, default=4)
     args = parser.parse_args()
 
     config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     c = config["media"]
     client = HttpClient(
         user_agent=config["project"]["user_agent"],
+        timeout_seconds=args.timeout_seconds,
+        max_retries=args.max_retries,
         sleep_seconds=c["request_sleep_seconds"],
     )
     collector = MediaCollector(

@@ -1,0 +1,9 @@
+source_id,source_name,source_type,formal_partnership,platform,url,published_at,article_genre,market_category,notes,partnership_evidence_url
+ind_ap2_001,Associated Press,independent_media,0,kalshi,https://apnews.com/article/37766ee2922615be1bf6fa193dee1f43,2026-04-22,news,politics,Verified from AP search,
+ind_ap2_002,Associated Press,independent_media,0,kalshi,https://apnews.com/article/5b3aba465f57f5be9052d70c6739fc02,2026-06-09,news,other,Verified from AP search,
+ind_ap2_003,Associated Press,independent_media,0,polymarket,https://apnews.com/article/3924aed69e6d6efdda7127cf82364990,,news,geopolitics,Verified from AP search,
+ind_ap2_004,Associated Press,independent_media,0,multiple,https://apnews.com/article/c3fecd3e120b4d5be103bc9e1f4a5587,2026-03-12,news,other,Verified from AP search,
+ind_ap2_005,Associated Press,independent_media,0,kalshi,https://apnews.com/article/3687ec3ea6725fa53389d9d594433580,2026-03-17,news,sports,Verified from AP search,
+ind_ap2_006,Associated Press,independent_media,0,kalshi,https://apnews.com/article/563fbd63ded38faafc1a36b0382f7894,,news,sports,Verified from AP search,
+ind_ap2_007,Associated Press,independent_media,0,polymarket,https://apnews.com/article/79965008b559ea3c00940ea6e92dd509,2026-03-19,news,sports,Verified from AP search,
+ind_ap2_008,Associated Press,independent_media,0,multiple,https://apnews.com/article/3c62028a8c0ecaf22ab6a0921d051d20,2026-03-25,opinion,other,Verified from AP search,

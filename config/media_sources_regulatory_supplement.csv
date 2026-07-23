@@ -1,0 +1,10 @@
+source_id,source_name,source_type,formal_partnership,platform,url,published_at,article_genre,market_category,notes,partnership_evidence_url
+reg_sup_001,CFTC,regulatory_critical,0,kalshi,https://www.cftc.gov/PressRoom/PressReleases/9267-26,2026-07-14,press_release,other,Discovered from CFTC press search,
+reg_sup_002,CFTC,regulatory_critical,0,kalshi,https://www.cftc.gov/PressRoom/PressReleases/9251-26,2026-06-12,press_release,other,Discovered from CFTC press search,
+reg_sup_003,CFTC,regulatory_critical,0,kalshi,https://www.cftc.gov/PressRoom/PressReleases/9240-26,2026-05-29,press_release,technology,Discovered from CFTC press search,
+reg_sup_004,CFTC,regulatory_critical,0,kalshi,https://www.cftc.gov/PressRoom/PressReleases/9220-26,2026-04-28,press_release,other,Discovered from CFTC press search,
+reg_sup_005,CFTC,regulatory_critical,0,multiple,https://www.cftc.gov/PressRoom/PressReleases/9182-26,2026-02-12,press_release,other,Discovered from CFTC press search,
+reg_sup_006,CFTC,regulatory_critical,0,multiple,https://www.cftc.gov/PressRoom/PressReleases/9150-25,2025-12-10,press_release,other,Discovered from CFTC press search,
+reg_sup_007,Senator Elizabeth Warren,regulatory_critical,0,multiple,https://www.warren.senate.gov/newsroom/press-releases/warren-40-lawmakers-push-regulators-to-address-illegal-insider-trading-in-prediction-markets,2026-03-30,press_release,other,Discovered from regulatory search,
+reg_sup_008,Senator Elizabeth Warren,regulatory_critical,0,kalshi,https://www.warren.senate.gov/news/press-releases/warren-statement-on-trumps-cftc-preempting-state-regulation-on-prediction-markets/,2026-02-17,press_release,other,Discovered from regulatory search,
+reg_sup_009,Senator Elizabeth Warren,regulatory_critical,0,multiple,https://www.warren.senate.gov/newsroom/press-releases/at-hearing-warren-questions-hegseth-on-insider-trading-during-iran-war-as-he-ducks-responsibility/,2026-04-30,press_release,geopolitics,Discovered from regulatory search,
