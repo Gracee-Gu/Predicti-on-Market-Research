@@ -1,4 +1,11 @@
-# Stage 4 Analysis Plan
+# Analysis Plan (Original)
+
+> **Status.** This was the original plan for a regression linking framing constructs to
+> `overreach_severity`. It was not run: `overreach_severity` turned out to be a deterministic
+> function of the other constructs (see the paper's §3.3 and Appendix C), which would make any
+> such regression circular. The published paper reports construct prevalence and its association
+> with independently-verified market-quality evidence instead. This document is kept as a record
+> of the original design, not as a description of the final methodology.
 
 ## Objective
 

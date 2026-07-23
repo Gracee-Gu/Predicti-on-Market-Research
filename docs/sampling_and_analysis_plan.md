@@ -1,4 +1,9 @@
-# Stage 3 Sampling and Analysis Plan
+# Sampling and Analysis Plan (Original)
+
+> **Status.** This was the original sampling and coding plan, including "blind double coding" by
+> two human coders. It was not run that way: both "coders" ended up being the same automated
+> keyword classifier (see the paper's §3.3 and `docs/codebook.md`). Kept as a record of the
+> original design.
 
 The sampling frame is the union of valid Stage 2 article–market matches. Exclude unmatched, ambiguous, current-only-not-aligned, duplicate URL–market pairs, and rows lacking publication time. Retain unavailable historical quality as missing rather than imputing current order-book conditions.
 

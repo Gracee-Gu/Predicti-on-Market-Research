@@ -1,5 +1,11 @@
 # Research Design
 
+> **Status.** This is the original research design, written before data collection. One part of it
+> was not carried out as planned: §&thinsp;"human-coded audit set" below describes a two-human
+> double-coding process that, in the executed project, was instead a disclosed automated keyword
+> classifier applied twice (see the paper's §3.3 and `docs/codebook.md`). The theory, constructs,
+> and overall design below otherwise reflect what was actually studied.
+
 ## Project title
 
 **Prediction Markets as Manufactured Public Signals: Media Framing, Market Quality, and Representational Overreach**

@@ -6,10 +6,6 @@ __pycache__/
 .env
 .DS_Store
 uv.lock
-prediction_market_stage4_overlay.zip
-prediction_market_stage5_overlay.zip
-prediction_market_stage6_overlay.zip
-prediction_market_stage7_overlay.zip
 
 # Raw or copyrighted source material is local-only.
 data/raw/*
