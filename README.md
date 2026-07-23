@@ -48,7 +48,7 @@ In short:
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt -r requirements-figures.txt
+pip install -r requirements.txt
 uv run pytest                      # unit tests
 python scripts/make_figures.py     # regenerate figures from the audited data
 ```
