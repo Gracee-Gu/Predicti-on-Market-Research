@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmresearch"
+version = "0.2.0"
+description = "Corpus and market-data collection for prediction-market representational-overreach research."
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31,<3",
+  "PyYAML>=6.0,<7",
+  "beautifulsoup4>=4.12,<5"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.5,<1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
